@@ -3,4 +3,5 @@ info:
   title: Mock-first Demo
   version: 1.0.0
 servers:
-- url: https://dev-mockfirstdemo.wiremockapi.cloud
+- url: https://git-sync.wiremockapi.cloud
+paths: {}
