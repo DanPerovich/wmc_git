@@ -25,7 +25,7 @@ paths:
                 type: object
                 properties:
                   stub:
-                    type: integer
+                    type: string
                     format: int32
                     example: 1
                 x-wiremock-hash: -879452980
