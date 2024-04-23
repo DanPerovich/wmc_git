@@ -39,7 +39,7 @@ paths:
                     type: string
                     example: Akehurst
                   organization:
-                    type: string
+                    type: integer
                     example: Marketing
                 x-wiremock-hash: 1399856568
               examples:
