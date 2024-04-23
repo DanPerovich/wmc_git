@@ -29,9 +29,9 @@ paths:
                 type: object
                 properties:
                   contactId:
-                    type: integer
+                    type: string
                     format: int32
-                    example: 2
+                    example: "2"
                   firstName:
                     type: string
                     example: Tom
@@ -39,7 +39,7 @@ paths:
                     type: string
                     example: Akehurst
                   organization:
-                    type: integer
+                    type: string
                     example: Marketing
                 x-wiremock-hash: 1399856568
               examples:
