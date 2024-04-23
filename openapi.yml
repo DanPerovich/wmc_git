@@ -79,8 +79,8 @@ paths:
                   type: string
                   example: Niu
                 organization:
-                  type: integer
-                  example: 2
+                  type: string
+                  example: Marketing
             examples:
               Create Contact 3:
                 value: |-
