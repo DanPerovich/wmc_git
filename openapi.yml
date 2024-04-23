@@ -29,9 +29,9 @@ paths:
                 type: object
                 properties:
                   contactId:
-                    type: integer
+                    type: string
                     format: int32
-                    example: 2
+                    example: "2"
                   firstName:
                     type: string
                     example: Tom
@@ -79,8 +79,8 @@ paths:
                   type: string
                   example: Niu
                 organization:
-                  type: string
-                  example: Marketing
+                  type: integer
+                  example: 2
             examples:
               Create Contact 3:
                 value: |-
