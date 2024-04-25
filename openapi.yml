@@ -1,0 +1,145 @@
+openapi: 3.0.1
+info:
+  title: WireMock Cloud Academy - OpenAPI
+servers:
+- url: https://academyopenapi.wiremockapi.cloud
+paths:
+  /contacts/{contactId}:
+    get:
+      description: Get contacts by contactId.
+      operationId: getContactsByContactId
+      parameters:
+      - name: contactId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        example: "12"
+      responses:
+        "200":
+          description: Get Contact 2
+          content:
+            application/json:
+              schema:
+                required:
+                - contactId
+                - firstName
+                - lastName
+                type: object
+                properties:
+                  contactId:
+                    type: integer
+                    format: int32
+                    example: 2
+                  firstName:
+                    type: string
+                    example: Tom
+                  lastName:
+                    type: string
+                    example: Akehurst
+                  organization:
+                    type: string
+                    example: Marketing
+                x-wiremock-hash: 1399856568
+              examples:
+                Get Contact 1:
+                  value: |-
+                    {
+                      "contactId": 1,
+                      "firstName": "Dan",
+                      "lastName": "Perovich"
+                    }
+                Get Contact 2:
+                  value: |-
+                    {
+                      "contactId": 2,
+                      "firstName": "Tom",
+                      "lastName": "Akehurst",
+                      "organization": "Marketing"
+                    }
+  /contacts:
+    post:
+      description: Post contacts.
+      operationId: postContacts
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+              - firstName
+              - lastName
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  example: Richie
+                lastName:
+                  type: string
+                  example: Niu
+                organization:
+                  type: string
+                  example: Finance
+            examples:
+              Create Contact 3:
+                value: |-
+                  {
+                      "firstName": "David",
+                      "lastName": "Cano"
+                  }
+              Create Contact 4:
+                value: |-
+                  {
+                      "firstName": "Richie",
+                      "lastName": "Niu",
+                      "organization": "Finance"
+                  }
+        required: true
+      responses:
+        "201":
+          description: Create Contact 4
+          content:
+            application/json:
+              schema:
+                required:
+                - contactId
+                - created_utc
+                - firstName
+                - lastName
+                type: object
+                properties:
+                  contactId:
+                    type: integer
+                    format: int32
+                    example: 4
+                  firstName:
+                    type: string
+                    example: Richie
+                  lastName:
+                    type: string
+                    example: Niu
+                  organization:
+                    type: string
+                    example: Finance
+                  created_utc:
+                    type: string
+                    example: 2024-02-01T15:58:35Z
+                x-wiremock-hash: 545492784
+              examples:
+                Create Contact 3:
+                  value: |-
+                    {
+                        "contactId": 3,
+                        "firstName": "David",
+                        "lastName": "Cano",
+                        "created_utc": "2024-02-01T15:54:14Z"
+                    }
+                Create Contact 4:
+                  value: |-
+                    {
+                        "contactId": 4,
+                        "firstName": "Richie",
+                        "lastName": "Niu",
+                        "organization": "Finance",
+                        "created_utc": "2024-02-01T15:58:35Z"
+                    }
