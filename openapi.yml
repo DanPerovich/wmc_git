@@ -38,8 +38,8 @@ paths:
                     type: string
                     example: Akehurst
                   organization:
-                    type: string
-                    example: Marketing
+                    type: integer
+                    example: 1
                 x-wiremock-hash: 1399856568
               examples:
                 Get Contact 1:
