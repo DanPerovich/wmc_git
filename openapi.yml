@@ -1,9 +1,9 @@
 openapi: 3.0.1
 info:
-  title: Live Demo 2
+  title: Nordic APIs
   version: 1.0.0
 servers:
-- url: https://live-demo-2.wiremockapi.cloud
+- url: https://nordicapis.wiremockapi.cloud
 paths:
   /contact/{contactId}:
     get:
@@ -17,7 +17,7 @@ paths:
         explode: false
         schema:
           type: string
-        example: "1"
+        example: 1
       responses:
         "200":
           description: Get Contact 2
